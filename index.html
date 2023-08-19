@@ -1,0 +1,31 @@
+DOCTYPE html>
+<html>
+<head>
+    <title>AR-VR PROJECT</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-camera position="0 15 30" rotation="0 -360 0"></a-camera>
+    <a-assets>
+        <!-- Load the texture for the ground -->
+        <img id="groundTexture" src="texture/grass.avif">
+        <!-- Load the texture for the walls -->
+        <img id="wallTexture" src="texture/wall.jpeg">
+        <!-- Load the texture for the outer ground -->
+        
+    </a-assets>
+
+    <!--sky-->
+    <a-sky src="texture/sky.jpeg" theta-length="90"></a-sky>
+    <!--outer ground-->
+    <a-plane src="#groundTexture" position="0 -1.426 0" rotation="-90 0 0" scale="1500 1500 1500" repeat="10 10"></a-plane>
+    <a-gltf-model position="0 0 0" rotation="0 180 0" scale="0.5 0.5 0.5" src="finalproj.glb"></a-gltf-model>
+<!--camera positioning-->
+    <a-entity id="rig" position="2 5 -30" rotation="0 180 0">
+        <a-camera id="camera"></a-camera>
+    </a-entity>
+
+</a-scene>
+</body>
+</html>
